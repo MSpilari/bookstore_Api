@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=bookstoredb
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123
+    volumes:
+      - mysql_volume:/var/lib/mysql
+volumes:
+  mysql_volume:
